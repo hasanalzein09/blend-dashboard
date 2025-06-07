@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة القيادة التنفيذية - مقهى الريادة | السنة الأولى من النجاح</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <i class="fas fa-coffee"></i>
+                <h1>مقهى الريادة</h1>
+                <span class="success-badge">السنة الأولى من النجاح</span>
+            </div>
+            <div class="header-stats">
+                <div class="quick-stat">
+                    <span class="stat-value">$89,240</span>
+                    <span class="stat-label">إيرادات هذا الشهر</span>
+                </div>
+                <div class="quick-stat">
+                    <span class="stat-value">+182%</span>
+                    <span class="stat-label">نمو سنوي</span>
+                </div>
+                <div class="quick-stat">
+                    <span class="stat-value">2,847</span>
+                    <span class="stat-label">عملاء نشطين</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="date-filter">
+                    <select id="timeFilter">
+                        <option value="today">اليوم</option>
+                        <option value="week">هذا الأسبوع</option>
+                        <option value="month" selected>هذا الشهر</option>
+                        <option value="year">السنة الكاملة</option>
+                    </select>
+                </div>
+                <button class="export-btn">
+                    <i class="fas fa-download"></i>
+                    تصدير التقرير
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="nav-section">
+                <h3>نظرة عامة</h3>
+                <a href="#overview" class="nav-item active">
+                    <i class="fas fa-chart-pie"></i>
+                    المؤشرات الرئيسية
+                </a>
+                <a href="#financial" class="nav-item">
+                    <i class="fas fa-money-bill-trend-up"></i>
+                    التحليل المالي
+                </a>
+                <a href="#customers" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    تحليل العملاء
+                </a>
+            </div>
+            <div class="nav-section">
+                <h3>العمليات</h3>
+                <a href="#sales" class="nav-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    المبيعات والمنتجات
+                </a>
+                <a href="#inventory" class="nav-item">
+                    <i class="fas fa-boxes"></i>
+                    إدارة المخزون
+                </a>
+                <a href="#ai" class="nav-item">
+                    <i class="fas fa-brain"></i>
+                    الذكاء الاصطناعي
+                </a>
+            </div>
+            <div class="nav-section">
+                <h3>التقارير</h3>
+                <a href="#predictions" class="nav-item">
+                    <i class="fas fa-crystal-ball"></i>
+                    التوقعات المستقبلية
+                </a>
+                <a href="#comparisons" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    المقارنات والهدف
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="section-header">
+                    <h2>🏆 نظرة عامة - رحلة سنة من النجاح الباهر</h2>
+                    <p>من مقهى تقليدي صغير إلى إمبراطورية رقمية رائدة</p>
+                </div>
+
+                <!-- Success Journey Banner -->
+                <div class="journey-banner">
+                    <div class="journey-content">
+                        <div class="journey-milestone">
+                            <div class="milestone-icon">🚀</div>
+                            <div class="milestone-info">
+                                <h4>يناير 2024</h4>
+                                <p>البداية المتواضعة</p>
+                                <span>$12,500/شهر</span>
+                            </div>
+                        </div>
+                        <div class="journey-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="journey-milestone">
+                            <div class="milestone-icon">📈</div>
+                            <div class="milestone-info">
+                                <h4>يونيو 2024</h4>
+                                <p>النمو المتسارع</p>
+                                <span>$45,800/شهر</span>
+                            </div>
+                        </div>
+                        <div class="journey-arrow">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="journey-milestone highlighted">
+                            <div class="milestone-icon">👑</div>
+                            <div class="milestone-info">
+                                <h4>ديسمبر 2024</h4>
+                                <p>القمة والريادة</p>
+                                <span>$89,240/شهر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card financial">
+                        <div class="metric-header">
+                            <h3>💰 الأداء المالي</h3>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-trending-up"></i>
+                                +182%
+                            </div>
+                        </div>
+                        <div class="metric-body">
+                            <div class="primary-value">$89,240</div>
+                            <div class="metric-label">إيرادات ديسمبر 2024</div>
+                            <div class="comparison">مقابل $12,500 في يناير</div>
+                            <div class="sub-metrics">
+                                <div class="sub-metric">
+                                    <span class="label">صافي الربح:</span>
+                                    <span class="value positive">$62,468</span>
+                                </div>
+                                <div class="sub-metric">
+                                    <span class="label">هامش الربح:</span>
+                                    <span class="value">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card customers">
+                        <div class="metric-header">
+                            <h3>👥 قاعدة العملاء</h3>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-user-plus"></i>
+                                +340%
+                            </div>
+                        </div>
+                        <div class="metric-body">
+                            <div class="primary-value">2,847</div>
+                            <div class="metric-label">عملاء نشطين</div>
+                            <div class="comparison">مقابل 647 في البداية</div>
+                            <div class="sub-metrics">
+                                <div class="sub-metric">
+                                    <span class="label">معدل الولاء:</span>
+                                    <span class="value positive">85%</span>
+                                </div>
+                                <div class="sub-metric">
+                                    <span class="label">متوسط الإنفاق:</span>
+                                    <span class="value">$31.40</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card digital">
+                        <div class="metric-header">
+                            <h3>📱 القنوات الرقمية</h3>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-mobile-alt"></i>
+                                +520%
+                            </div>
+                        </div>
+                        <div class="metric-body">
+                            <div class="primary-value">65%</div>
+                            <div class="metric-label">مبيعات التطبيق</div>
+                            <div class="comparison">من إجمالي المبيعات</div>
+                            <div class="sub-metrics">
+                                <div class="sub-metric">
+                                    <span class="label">طلبات توصيل:</span>
+                                    <span class="value positive">1,240/شهر</span>
+                                </div>
+                                <div class="sub-metric">
+                                    <span class="label">تقييم التطبيق:</span>
+                                    <span class="value">4.8/5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card ai">
+                        <div class="metric-header">
+                            <h3>🧠 الذكاء الاصطناعي</h3>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-robot"></i>
+                                97%
+                            </div>
+                        </div>
+                        <div class="metric-body">
+                            <div class="primary-value">$28,500</div>
+                            <div class="metric-label">وفورات شهرية</div>
+                            <div class="comparison">بفضل الذكاء الاصطناعي</div>
+                            <div class="sub-metrics">
+                                <div class="sub-metric">
+                                    <span class="label">دقة التوقعات:</span>
+                                    <span class="value positive">97%</span>
+                                </div>
+                                <div class="sub-metric">
+                                    <span class="label">توصيات منفذة:</span>
+                                    <span class="value">124</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Financial Analysis Section -->
+            <section id="financial" class="content-section">
+                <div class="section-header">
+                    <h2>💰 التحليل المالي المتقدم - أرقام لا تكذب</h2>
+                    <p>رحلة الثراء من 12,500$ إلى 89,240$ شهرياً في عام واحد فقط</p>
+                </div>
+
+                <!-- Financial Summary Cards -->
+                <div class="financial-cards">
+                    <div class="financial-card revenue">
+                        <div class="card-icon">📈</div>
+                        <div class="card-content">
+                            <h3>الإيرادات الإجمالية</h3>
+                            <div class="amount">$642,280</div>
+                            <div class="period">السنة الأولى كاملة</div>
+                            <div class="growth">+613% من التوقعات</div>
+                        </div>
+                    </div>
+                    
+                    <div class="financial-card profit">
+                        <div class="card-icon">💎</div>
+                        <div class="card-content">
+                            <h3>صافي الأرباح</h3>
+                            <div class="amount">$449,596</div>
+                            <div class="period">متوسط هامش 70%</div>
+                            <div class="growth">أعلى من الصناعة بـ 233%</div>
+                        </div>
+                    </div>
+
+                    <div class="financial-card savings">
+                        <div class="card-icon">🛡️</div>
+                        <div class="card-content">
+                            <h3>الوفورات المحققة</h3>
+                            <div class="amount">$156,800</div>
+                            <div class="period">بفضل الذكاء الاصطناعي</div>
+                            <div class="growth">تجنب خسائر محققة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Chart -->
+                <div class="chart-container">
+                    <h3>📊 تطور الإيرادات والأرباح الشهرية</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+
+                <!-- ROI Analysis -->
+                <div class="roi-analysis">
+                    <h3>🎯 تحليل العائد على الاستثمار</h3>
+                    <div class="roi-breakdown">
+                        <div class="roi-item">
+                            <span class="label">الاستثمار الأولي:</span>
+                            <span class="value">$85,000</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="label">العائد السنوي:</span>
+                            <span class="value positive">$449,596</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="label">نسبة العائد:</span>
+                            <span class="value highlight">529%</span>
+                        </div>
+                        <div class="roi-item">
+                            <span class="label">فترة الاسترداد:</span>
+                            <span class="value">2.3 أشهر</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Analysis Section -->
+            <section id="customers" class="content-section">
+                <div class="section-header">
+                    <h2>👥 تحليل العملاء - من 647 إلى 2,847 عميل نشط</h2>
+                    <p>نمو قاعدة العملاء بنسبة 340% مع زيادة معدل الولاء إلى 85%</p>
+                </div>
+
+                <!-- Customer Metrics -->
+                <div class="customer-metrics">
+                    <div class="customer-metric">
+                        <div class="metric-icon">👥</div>
+                        <div class="metric-data">
+                            <h4>إجمالي العملاء</h4>
+                            <div class="metric-value">2,847</div>
+                            <div class="metric-change">+2,200 عميل جديد</div>
+                        </div>
+                    </div>
+
+                    <div class="customer-metric">
+                        <div class="metric-icon">❤️</div>
+                        <div class="metric-data">
+                            <h4>معدل الولاء</h4>
+                            <div class="metric-value">85%</div>
+                            <div class="metric-change">أعلى من المعدل العام بـ 60%</div>
+                        </div>
+                    </div>
+
+                    <div class="customer-metric">
+                        <div class="metric-icon">💰</div>
+                        <div class="metric-data">
+                            <h4>متوسط الإنفاق</h4>
+                            <div class="metric-value">$31.40</div>
+                            <div class="metric-change">زيادة 67% من البداية</div>
+                        </div>
+                    </div>
+
+                    <div class="customer-metric">
+                        <div class="metric-icon">📱</div>
+                        <div class="metric-data">
+                            <h4>مستخدمي التطبيق</h4>
+                            <div class="metric-value">2,456</div>
+                            <div class="metric-change">86% من إجمالي العملاء</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Growth Chart -->
+                <div class="chart-container">
+                    <h3>📈 نمو قاعدة العملاء الشهرية</h3>
+                    <canvas id="customerChart"></canvas>
+                </div>
+
+                <!-- Customer Segmentation -->
+                <div class="customer-segments">
+                    <h3>🎯 تصنيف العملاء</h3>
+                    <div class="segments-grid">
+                        <div class="segment vip">
+                            <h4>عملاء VIP</h4>
+                            <div class="segment-count">342</div>
+                            <div class="segment-revenue">$28,450/شهر</div>
+                            <div class="segment-desc">ينفقون أكثر من $100 شهرياً</div>
+                        </div>
+
+                        <div class="segment regular">
+                            <h4>عملاء منتظمين</h4>
+                            <div class="segment-count">1,689</div>
+                            <div class="segment-revenue">$45,280/شهر</div>
+                            <div class="segment-desc">يزورون 2-3 مرات أسبوعياً</div>
+                        </div>
+
+                        <div class="segment occasional">
+                            <h4>عملاء عاديين</h4>
+                            <div class="segment-count">816</div>
+                            <div class="segment-revenue">$15,510/شهر</div>
+                            <div class="segment-desc">يزورون مرة أسبوعياً أو أقل</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sales & Products Section -->
+            <section id="sales" class="content-section">
+                <div class="section-header">
+                    <h2>🛍️ تحليل المبيعات والمنتجات</h2>
+                    <p>نمو المبيعات عبر كل القنوات مع تفوق واضح للمنتجات المميزة</p>
+                </div>
+
+                <!-- Sales Channels -->
+                <div class="sales-channels">
+                    <div class="channel app">
+                        <div class="channel-icon">📱</div>
+                        <h3>مبيعات التطبيق</h3>
+                        <div class="channel-value">$58,006</div>
+                        <div class="channel-percentage">65% من إجمالي المبيعات</div>
+                        <div class="channel-growth">+520% نمو سنوي</div>
+                    </div>
+
+                    <div class="channel instore">
+                        <div class="channel-icon">🏪</div>
+                        <h3>المبيعات المباشرة</h3>
+                        <div class="channel-value">$24,134</div>
+                        <div class="channel-percentage">27% من إجمالي المبيعات</div>
+                        <div class="channel-growth">+45% نمو سنوي</div>
+                    </div>
+
+                    <div class="channel delivery">
+                        <div class="channel-icon">🚚</div>
+                        <h3>التوصيل</h3>
+                        <div class="channel-value">$7,100</div>
+                        <div class="channel-percentage">8% من إجمالي المبيعات</div>
+                        <div class="channel-growth">+890% نمو سنوي</div>
+                    </div>
+                </div>
+
+                <!-- Top Products Chart -->
+                <div class="chart-container">
+                    <h3>🏆 أفضل المنتجات مبيعاً</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+
+                <!-- Products Performance -->
+                <div class="products-performance">
+                    <h3>📊 أداء المنتجات المفصل</h3>
+                    <div class="products-table">
+                        <div class="table-header">
+                            <span>المنتج</span>
+                            <span>المبيعات</span>
+                            <span>الإيرادات</span>
+                            <span>النمو</span>
+                            <span>الهامش</span>
+                        </div>
+                        <div class="table-row">
+                            <span>قهوة عربية مميزة</span>
+                            <span>2,847</span>
+                            <span>$28,470</span>
+                            <span class="positive">+45%</span>
+                            <span class="profit">72%</span>
+                        </div>
+                        <div class="table-row">
+                            <span>كابتشينو إيطالي</span>
+                            <span>2,156</span>
+                            <span>$25,872</span>
+                            <span class="positive">+38%</span>
+                            <span class="profit">68%</span>
+                        </div>
+                        <div class="table-row">
+                            <span>لاتيه بالفانيليا</span>
+                            <span>1,893</span>
+                            <span>$22,716</span>
+                            <span class="positive">+42%</span>
+                            <span class="profit">65%</span>
+                        </div>
+                        <div class="table-row">
+                            <span>تشيز كيك نيويورك</span>
+                            <span>1,456</span>
+                            <span>$20,384</span>
+                            <span class="positive">+52%</span>
+                            <span class="profit">78%</span>
+                        </div>
+                        <div class="table-row">
+                            <span>سموثي التوت البري</span>
+                            <span>1,278</span>
+                            <span>$17,892</span>
+                            <span class="positive">+67%</span>
+                            <span class="profit">81%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Inventory Section -->
+            <section id="inventory" class="content-section">
+                <div class="section-header">
+                    <h2>📦 إدارة المخزون الذكية</h2>
+                    <p>تحسين كفاءة المخزون بنسبة 94% مع تقليل الفاقد إلى أقل من 1%</p>
+                </div>
+
+                <!-- Inventory Metrics -->
+                <div class="inventory-overview">
+                    <div class="inventory-stat">
+                        <div class="stat-icon">📊</div>
+                        <h4>دقة المخزون</h4>
+                        <div class="stat-value">99.7%</div>
+                        <div class="stat-desc">مقابل 65% قبل النظام</div>
+                    </div>
+
+                    <div class="inventory-stat">
+                        <div class="stat-icon">⚡</div>
+                        <h4>سرعة الدوران</h4>
+                        <div class="stat-value">24x</div>
+                        <div class="stat-desc">مرة سنوياً (ممتاز)</div>
+                    </div>
+
+                    <div class="inventory-stat">
+                        <div class="stat-icon">💸</div>
+                        <h4>تقليل الفاقد</h4>
+                        <div class="stat-value">96%</div>
+                        <div class="stat-desc">وفورات $18,450 سنوياً</div>
+                    </div>
+
+                    <div class="inventory-stat">
+                        <div class="stat-icon">🤖</div>
+                        <h4>طلبات تلقائية</h4>
+                        <div class="stat-value">89%</div>
+                        <div class="stat-desc">من الطلبات بالذكاء الاصطناعي</div>
+                    </div>
+                </div>
+
+                <!-- Current Stock Status -->
+                <div class="stock-status">
+                    <h3>📋 حالة المخزون الحالية</h3>
+                    <div class="stock-items">
+                        <div class="stock-item optimal">
+                            <span class="item-name">بن عربي مختار</span>
+                            <div class="stock-level">
+                                <div class="level-bar" style="width: 78%"></div>
+                                <span class="level-text">78% (مثالي)</span>
+                            </div>
+                            <span class="reorder-date">إعادة الطلب: 3 أيام</span>
+                        </div>
+
+                        <div class="stock-item good">
+                            <span class="item-name">حليب طازج</span>
+                            <div class="stock-level">
+                                <div class="level-bar" style="width: 65%"></div>
+                                <span class="level-text">65% (جيد)</span>
+                            </div>
+                            <span class="reorder-date">إعادة الطلب: 2 أيام</span>
+                        </div>
+
+                        <div class="stock-item warning">
+                            <span class="item-name">سكر بني</span>
+                            <div class="stock-level">
+                                <div class="level-bar warning" style="width: 25%"></div>
+                                <span class="level-text">25% (تحذير)</span>
+                            </div>
+                            <span class="reorder-date">طلب تلقائي اليوم</span>
+                        </div>
+
+                        <div class="stock-item optimal">
+                            <span class="item-name">كابسولات إسبريسو</span>
+                            <div class="stock-level">
+                                <div class="level-bar" style="width: 82%"></div>
+                                <span class="level-text">82% (مثالي)</span>
+                            </div>
+                            <span class="reorder-date">إعادة الطلب: 5 أيام</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Predictions -->
+                <div class="inventory-predictions">
+                    <h3>🔮 توقعات الذكاء الاصطناعي</h3>
+                    <div class="predictions-list">
+                        <div class="prediction">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="prediction-content">
+                                <h4>تنبيه: نفاد مُحتمل</h4>
+                                <p>الفانيليا السائلة قد تنفد خلال 36 ساعة بناءً على معدل الاستهلاك الحالي</p>
+                                <button class="auto-order-btn">طلب تلقائي الآن</button>
+                            </div>
+                        </div>
+
+                        <div class="prediction success">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="prediction-content">
+                                <h4>توقع إيجابي</h4>
+                                <p>زيادة متوقعة 23% في استهلاك القهوة الباردة الأسبوع المقبل (طقس حار)</p>
+                                <button class="prepare-btn">تحضير إضافي</button>
+                            </div>
+                        </div>
+
+                        <div class="prediction info">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="prediction-content">
+                                <h4>فرصة توفير</h4>
+                                <p>يمكن توفير 15% على السكر البني عبر تغيير المورد الأسبوع المقبل</p>
+                                <button class="optimize-btn">تطبيق التحسين</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Analysis Section -->
+            <section id="ai" class="content-section">
+                <div class="section-header">
+                    <h2>🧠 تحليل أداء الذكاء الاصطناعي</h2>
+                    <p>النظام الذي وفر $156,800 في السنة الأولى وحقق دقة 97% في التوقعات</p>
+                </div>
+
+                <!-- AI Performance Overview -->
+                <div class="ai-performance">
+                    <div class="ai-metric">
+                        <div class="ai-icon">🎯</div>
+                        <h4>دقة التوقعات</h4>
+                        <div class="ai-value">97.3%</div>
+                        <div class="ai-desc">متوسط دقة جميع التوقعات</div>
+                    </div>
+
+                    <div class="ai-metric">
+                        <div class="ai-icon">⚡</div>
+                        <h4>سرعة المعالجة</h4>
+                        <div class="ai-value">0.23s</div>
+                        <div class="ai-desc">متوسط وقت التحليل</div>
+                    </div>
+
+                    <div class="ai-metric">
+                        <div class="ai-icon">💰</div>
+                        <h4>الوفورات المحققة</h4>
+                        <div class="ai-value">$156,800</div>
+                        <div class="ai-desc">إجمالي الوفورات السنوية</div>
+                    </div>
+
+                    <div class="ai-metric">
+                        <div class="ai-icon">🚀</div>
+                        <h4>التوصيات المنفذة</h4>
+                        <div class="ai-value">436</div>
+                        <div class="ai-desc">توصية تم تطبيقها بنجاح</div>
+                    </div>
+                </div>
+
+                <!-- AI Performance Chart -->
+                <div class="chart-container">
+                    <h3>📊 أداء الذكاء الاصطناعي في المجالات المختلفة</h3>
+                    <canvas id="aiChart"></canvas>
+                </div>
+
+                <!-- AI Achievements -->
+                <div class="ai-achievements">
+                    <h3>🏆 إنجازات الذكاء الاصطناعي</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement">
+                            <div class="achievement-icon">🔮</div>
+                            <h4>توقع الطلب الدقيق</h4>
+                            <p>توقع صحيح لـ 97.3% من طلبات العملاء</p>
+                            <div class="achievement-impact">وفر $28,500 من الفاقد</div>
+                        </div>
+
+                        <div class="achievement">
+                            <div class="achievement-icon">💎</div>
+                            <h4>تحسين الأسعار</h4>
+                            <p>اقترح تعديلات أسعار زادت الأرباح 34%</p>
+                            <div class="achievement-impact">إيرادات إضافية $67,200</div>
+                        </div>
+
+                        <div class="achievement">
+                            <div class="achievement-icon">🎯</div>
+                            <h4>استهداف العملاء</h4>
+                            <p>حدد أفضل العروض لكل شريحة عملاء</p>
+                            <div class="achievement-impact">زيادة المبيعات 45%</div>
+                        </div>
+
+                        <div class="achievement">
+                            <div class="achievement-icon">🛡️</div>
+                            <h4>منع الخسائر</h4>
+                            <p>اكتشف ومنع 127 حالة خسارة محتملة</p>
+                            <div class="achievement-impact">توفير $89,300</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Predictions Section -->
+            <section id="predictions" class="content-section">
+                <div class="section-header">
+                    <h2>🔮 التوقعات والتخطيط المستقبلي</h2>
+                    <p>نظرة على السنة الثانية: توقعات نمو استثنائية وفرص ذهبية</p>
+                </div>
+
+                <!-- Future Projections -->
+                <div class="future-projections">
+                    <div class="projection-card revenue-projection">
+                        <h3>📈 توقعات الإيرادات - السنة الثانية</h3>
+                        <div class="projection-chart">
+                            <div class="projection-item">
+                                <span class="period">Q1 2025</span>
+                                <span class="amount">$312,450</span>
+                                <span class="growth">+78% نمو</span>
+                            </div>
+                            <div class="projection-item">
+                                <span class="period">Q2 2025</span>
+                                <span class="amount">$387,200</span>
+                                <span class="growth">+92% نمو</span>
+                            </div>
+                            <div class="projection-item">
+                                <span class="period">Q3 2025</span>
+                                <span class="amount">$425,800</span>
+                                <span class="growth">+98% نمو</span>
+                            </div>
+                            <div class="projection-item highlighted">
+                                <span class="period">Q4 2025</span>
+                                <span class="amount">$498,600</span>
+                                <span class="growth">+115% نمو</span>
+                            </div>
+                        </div>
+                        <div class="projection-total">
+                            <strong>الهدف السنوي: $1,624,050 (+153%)</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Growth Opportunities -->
+                <div class="growth-opportunities">
+                    <h3>🚀 الفرص النمو المحددة</h3>
+                    <div class="opportunities-list">
+                        <div class="opportunity high-priority">
+                            <div class="opportunity-header">
+                                <h4>فتح فرع ثاني</h4>
+                                <span class="priority high">أولوية عالية</span>
+                            </div>
+                            <div class="opportunity-details">
+                                <p>الموقع المثالي: منطقة الجادة الثقافية</p>
+                                <div class="opportunity-metrics">
+                                    <span>الاستثمار المطلوب: $95,000</span>
+                                    <span>العائد المتوقع: $45,000/شهر</span>
+                                    <span>فترة الاسترداد: 2.1 شهر</span>
+                                </div>
+                                <div class="opportunity-timeline">
+                                    <strong>الجدول الزمني: أبريل 2025</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="opportunity medium-priority">
+                            <div class="opportunity-header">
+                                <h4>إطلاق خدمة الكيترينغ</h4>
+                                <span class="priority medium">أولوية متوسطة</span>
+                            </div>
+                            <div class="opportunity-details">
+                                <p>استهداف الشركات والفعاليات الخاصة</p>
+                                <div class="opportunity-metrics">
+                                    <span>الاستثمار المطلوب: $25,000</span>
+                                    <span>العائد المتوقع: $18,500/شهر</span>
+                                    <span>فترة الاسترداد: 1.4 شهر</span>
+                                </div>
+                                <div class="opportunity-timeline">
+                                    <strong>الجدول الزمني: فبراير 2025</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="opportunity high-priority">
+                            <div class="opportunity-header">
+                                <h4>برنامج الفرنشايز</h4>
+                                <span class="priority high">أولوية عالية</span>
+                            </div>
+                            <div class="opportunity-details">
+                                <p>توسيع العلامة التجارية عبر الشراكات</p>
+                                <div class="opportunity-metrics">
+                                    <span>رسوم الفرنشايز: $50,000</span>
+                                    <span>العائد المتوقع: $8,500/شهر/فرع</span>
+                                    <span>الهدف: 5 فروع في السنة الثانية</span>
+                                </div>
+                                <div class="opportunity-timeline">
+                                    <strong>الجدول الزمني: يونيو 2025</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Metrics Targets -->
+                <div class="success-targets">
+                    <h3>🎯 أهداف النجاح - السنة الثانية</h3>
+                    <div class="targets-grid">
+                        <div class="target financial">
+                            <div class="target-icon">💰</div>
+                            <h4>الهدف المالي</h4>
+                            <div class="target-value">$1.62M</div>
+                            <div class="target-desc">إيرادات سنوية (+153%)</div>
+                            <div class="target-progress">
+                                <div class="progress-bar" style="width: 0%"></div>
+                                <span>0% مكتمل</span>
+                            </div>
+                        </div>
+
+                        <div class="target customers">
+                            <div class="target-icon">👥</div>
+                            <h4>قاعدة العملاء</h4>
+                            <div class="target-value">7,500</div>
+                            <div class="target-desc">عميل نشط (+163%)</div>
+                            <div class="target-progress">
+                                <div class="progress-bar" style="width: 38%"></div>
+                                <span>38% مكتمل</span>
+                            </div>
+                        </div>
+
+                        <div class="target expansion">
+                            <div class="target-icon">🏢</div>
+                            <h4>التوسع</h4>
+                            <div class="target-value">6</div>
+                            <div class="target-desc">فروع تشغيلية</div>
+                            <div class="target-progress">
+                                <div class="progress-bar" style="width: 17%"></div>
+                                <span>17% مكتمل</span>
+                            </div>
+                        </div>
+
+                        <div class="target market">
+                            <div class="target-icon">📊</div>
+                            <h4>حصة السوق</h4>
+                            <div class="target-value">15%</div>
+                            <div class="target-desc">من السوق المحلي</div>
+                            <div class="target-progress">
+                                <div class="progress-bar" style="width: 60%"></div>
+                                <span>60% مكتمل</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparisons Section -->
+            <section id="comparisons" class="content-section">
+                <div class="section-header">
+                    <h2>📊 المقارنات والإنجازات</h2>
+                    <p>كيف تحولنا من مقهى عادي إلى رائد السوق في 12 شهر فقط</p>
+                </div>
+
+                <!-- Before vs After Comparison -->
+                <div class="comparison-container">
+                    <div class="comparison-side before">
+                        <h3>😔 قبل النظام (يناير 2024)</h3>
+                        <div class="comparison-metrics">
+                            <div class="metric">
+                                <span class="label">الإيرادات الشهرية:</span>
+                                <span class="value old">$12,500</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">عدد العملاء:</span>
+                                <span class="value old">647</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">هامش الربح:</span>
+                                <span class="value old">15%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">الفاقد الشهري:</span>
+                                <span class="value loss">$2,800</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">ساعات العمل الإدارية:</span>
+                                <span class="value inefficient">45 ساعة/أسبوع</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">دقة المخزون:</span>
+                                <span class="value poor">65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-arrow">
+                        <div class="arrow-content">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>التطور في 12 شهر</span>
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+
+                    <div class="comparison-side after">
+                        <h3>🚀 بعد النظام (ديسمبر 2024)</h3>
+                        <div class="comparison-metrics">
+                            <div class="metric">
+                                <span class="label">الإيرادات الشهرية:</span>
+                                <span class="value new">$89,240</span>
+                                <span class="change">+613%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">عدد العملاء:</span>
+                                <span class="value new">2,847</span>
+                                <span class="change">+340%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">هامش الربح:</span>
+                                <span class="value new">70%</span>
+                                <span class="change">+367%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">الفاقد الشهري:</span>
+                                <span class="value new">$120</span>
+                                <span class="change">-96%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">ساعات العمل الإدارية:</span>
+                                <span class="value new">8 ساعات/أسبوع</span>
+                                <span class="change">-82%</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">دقة المخزون:</span>
+                                <span class="value new">99.7%</span>
+                                <span class="change">+53%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Comparison -->
+                <div class="industry-comparison">
+                    <h3>🏆 مقارنة مع المعايير الصناعية</h3>
+                    <div class="industry-metrics">
+                        <div class="industry-metric">
+                            <h4>هامش الربح</h4>
+                            <div class="metric-comparison">
+                                <div class="industry-bar">
+                                    <span class="label">معدل الصناعة</span>
+                                    <div class="bar industry" style="width: 20%">20%</div>
+                                </div>
+                                <div class="our-bar">
+                                    <span class="label">نتائجنا</span>
+                                    <div class="bar ours" style="width: 70%">70%</div>
+                                </div>
+                            </div>
+                            <div class="improvement">أفضل بـ 250%</div>
+                        </div>
+
+                        <div class="industry-metric">
+                            <h4>رضا العملاء</h4>
+                            <div class="metric-comparison">
+                                <div class="industry-bar">
+                                    <span class="label">معدل الصناعة</span>
+                                    <div class="bar industry" style="width: 65%">3.2/5</div>
+                                </div>
+                                <div class="our-bar">
+                                    <span class="label">نتائجنا</span>
+                                    <div class="bar ours" style="width: 94%">4.7/5</div>
+                                </div>
+                            </div>
+                            <div class="improvement">أفضل بـ 47%</div>
+                        </div>
+
+                        <div class="industry-metric">
+                            <h4>معدل النمو السنوي</h4>
+                            <div class="metric-comparison">
+                                <div class="industry-bar">
+                                    <span class="label">معدل الصناعة</span>
+                                    <div class="bar industry" style="width: 15%">8-12%</div>
+                                </div>
+                                <div class="our-bar">
+                                    <span class="label">نتائجنا</span>
+                                    <div class="bar ours" style="width: 100%">613%</div>
+                                </div>
+                            </div>
+                            <div class="improvement">أسرع بـ 76 مرة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success Recognition -->
+                <div class="success-recognition">
+                    <h3>🏅 الجوائز والاعترافات</h3>
+                    <div class="awards-grid">
+                        <div class="award">
+                            <div class="award-icon">🥇</div>
+                            <h4>أفضل مقهى رقمي</h4>
+                            <p>جائزة الابتكار التقني 2024</p>
+                            <span class="award-date">نوفمبر 2024</span>
+                        </div>
+
+                        <div class="award">
+                            <div class="award-icon">🌟</div>
+                            <h4>رائد الأعمال الشاب</h4>
+                            <p>غرفة تجارة بغداد</p>
+                            <span class="award-date">أكتوبر 2024</span>
+                        </div>
+
+                        <div class="award">
+                            <div class="award-icon">🚀</div>
+                            <h4>أسرع نمو في القطاع</h4>
+                            <p>اتحاد المطاعم والمقاهي</p>
+                            <span class="award-date">سبتمبر 2024</span>
+                        </div>
+
+                        <div class="award">
+                            <div class="award-icon">❤️</div>
+                            <h4>أحبوه العملاء</h4>
+                            <p>5 نجوم على جميع المنصات</p>
+                            <span class="award-date">ديسمبر 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
